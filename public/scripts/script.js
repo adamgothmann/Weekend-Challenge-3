@@ -6,8 +6,8 @@ $(document).ready(function() {
 
   function evaluateEquation() {
     var inputOne = $('#inputOneIn').val();
-    var operation = $('#operation').val();
     var inputTwo = $('#inputTwoIn').val();
+    var operation = $('#operation').val();
 
 //puts inputs and operator into an object
     var inputObject = {
@@ -22,7 +22,7 @@ $(document).ready(function() {
          data: inputObject,
          url: "/pathPost",
          success: function(data){
-                console.log(data);
+                console.log("data is: " + data);
 
           }
     });

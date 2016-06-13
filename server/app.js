@@ -14,12 +14,16 @@ app.get( '/', function( req, res ){
   res.sendFile( path.resolve( 'views/index.html' ) );
 });
 
+
+
 app.post('/pathPost', urlencodedParser, function( req, res ){
-  var one = Number(req.body.inputOneIn);
-  var two = Number(req.body.inputTwoIn);
+  var one = req.body.inputOneIn;
+  var two = req.body.inputTwoIn;
   var type = req.body.operation;
-  res.write(calculate(one, two, type));
-  res.end();
+
+  var result = calculate(one, two, type);
+  console.log(result);
+  res.send(result);
 });
 
 app.use(express.static('public'));
