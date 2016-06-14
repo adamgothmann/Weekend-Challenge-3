@@ -1,12 +1,12 @@
-var runEquation = function(x, y, type) {
-  if(type == "+") {
-    return x + y;
-  } if(type == "-") {
-    return x - y;
-  } if(type == "*") {
-    return x * y;
-  } if(type == "/") {
-    return x / y;
+var runEquation = function(checkObject) {
+  if(checkObject.operation == "+") {
+    return Number(checkObject.x) + Number(checkObject.y);
+  } if(checkObject.operation == "-") {
+    return Number(checkObject.x) - Number(checkObject.y);
+  } if(checkObject.operation == "*") {
+    return Number(checkObject.x) * Number(checkObject.y);
+  } if(checkObject.operation == "/") {
+    return Number(checkObject.x) / Number(checkObject.y);
   }
 };
 
